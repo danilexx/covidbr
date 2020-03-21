@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const path = require("path")
+const path = require("path");
 
 module.exports = {
   /* Your site config here */
@@ -12,7 +12,7 @@ module.exports = {
     "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-plugin-typescript",
-      options: {},
+      options: {}
     },
     {
       resolve: "gatsby-plugin-eslint",
@@ -22,24 +22,24 @@ module.exports = {
         stages: ["develop"],
         options: {
           emitWarning: true,
-          failOnError: false,
-        },
-      },
+          failOnError: false
+        }
+      }
     },
     {
       resolve: "gatsby-plugin-root-import",
       options: {
         src: path.join(__dirname, "src"),
-        pages: path.join(__dirname, "src/pages"),
-      },
+        pages: path.join(__dirname, "src/pages")
+      }
     },
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Roboto"],
-        },
-      },
-    },
-  ],
-}
+          families: ["Roboto"]
+        }
+      }
+    }
+  ]
+};

@@ -13,6 +13,9 @@ export const Container = styled.div`
   flex-wrap: wrap;
   margin: 1rem;
   align-items: center;
+  @media screen and (max-width: 420px) {
+    min-width: initial;
+  }
 `;
 
 export const Info = styled.div`
@@ -20,6 +23,11 @@ export const Info = styled.div`
   flex-direction: column;
   margin: 1rem 2rem;
   max-width: 50%;
+  @media screen and (max-width: 370px) {
+    max-width: initial;
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 export const Title = styled.h1`
@@ -68,4 +76,7 @@ export const DiseaseCards = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  @media screen and (max-width: 420px) {
+    flex-direction: column;
+  }
 `;
