@@ -1,0 +1,71 @@
+{
+  "name": "covidbr",
+  "private": true,
+  "description": "Simple Dashboard to covid 19 on brazil states",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "dev": "gatsby develop",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.8.8",
+    "@unform/core": "^2.0.0",
+    "@unform/web": "^2.0.0",
+    "axios": "^0.19.2",
+    "babel-plugin-styled-components": "^1.10.7",
+    "eslint-plugin-react": "^7.19.0",
+    "gatsby": "^2.19.7",
+    "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-react-helmet": "^3.1.23",
+    "gatsby-plugin-styled-components": "^3.1.20",
+    "gatsby-plugin-typescript": "^2.2.3",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "polished": "^3.4.4",
+    "react": "^16.12.0",
+    "react-burger-menu": "^2.6.13",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-scroll": "^1.7.16",
+    "react-use": "^13.27.0",
+    "styled-components": "^5.0.1",
+    "typescript": "^3.8.3",
+    "yup": "^0.28.3"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.1",
+    "@types/react": "^16.9.23",
+    "@types/react-burger-menu": "^2.6.1",
+    "@types/react-dom": "^16.9.5",
+    "@types/react-scroll": "^1.5.4",
+    "@types/styled-components": "^5.0.1",
+    "@types/yup": "^0.26.33",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-react-app": "^5.2.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "gatsby-plugin-eslint": "^2.0.8",
+    "gatsby-plugin-root-import": "^2.0.5",
+    "prettier": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
