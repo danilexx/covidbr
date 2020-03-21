@@ -19,7 +19,7 @@ export interface DiseasedState {
 
 const Home: React.FC = () => {
   useTitle("COVIDBR");
-  const [states, { set }] = useList<DiseasedState>([]);
+  const [states, { set, sort }] = useList<DiseasedState>([]);
   const fetchStates = React.useCallback(async () => {
     const response = await fetch(
       "https://covid19-brazil-api.now.sh/api/report/v1"
@@ -35,6 +35,7 @@ const Home: React.FC = () => {
       rest: state
     }));
     set(newStates);
+    sort((a, b) => a.name.localeCompare(b.name));
   }, []);
   React.useEffect(() => {
     fetchStates();
