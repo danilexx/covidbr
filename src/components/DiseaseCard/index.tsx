@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, Flag, Info, Title, Counts, Count, Time } from "./styles";
 import { DiseasedState } from "src/pages";
+import { formatDistance } from "date-fns";
+import { ptBR } from "date-fns/locale";
 
 export { DiseaseCards } from "./styles";
-
-const getDoubleNumber = (n1: number) => (n1 < 10 ? `0${n1}` : n1);
 
 const DiseaseCard: React.FC<{ state: DiseasedState }> = ({ state }) => {
   const flagName = state.name
@@ -12,7 +12,10 @@ const DiseaseCard: React.FC<{ state: DiseasedState }> = ({ state }) => {
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/\s/g, "-");
-  const time = new Date(state.updated);
+  const time = formatDistance(new Date(state.updated), new Date(), {
+    locale: ptBR,
+    addSuffix: true
+  });
   return (
     <Container>
       <Info>
@@ -25,12 +28,7 @@ const DiseaseCard: React.FC<{ state: DiseasedState }> = ({ state }) => {
             <Count type="recovered">Recuperados: {state.recovered}</Count>
           )}
         </Counts>
-        <Time>
-          Atualizado dia {getDoubleNumber(time.getDay())}/
-          {getDoubleNumber(time.getMonth())} as{" "}
-          {getDoubleNumber(time.getUTCHours())}:
-          {getDoubleNumber(time.getMinutes())}
-        </Time>
+        <Time>Atualizado {time}</Time>
       </Info>
       <Flag state={flagName} />
     </Container>
