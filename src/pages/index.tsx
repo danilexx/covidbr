@@ -27,11 +27,10 @@ const Home: React.FC = () => {
     const { data } = await response.json();
     const newStates = data.map((state: any) => ({
       uid: state.uid,
-      name: state.uf,
+      name: state.state,
       cases: state.cases,
       deaths: state.deaths,
       suspects: state.suspects,
-      recovered: state.refuses,
       updated: state.datetime,
       rest: state
     }));
