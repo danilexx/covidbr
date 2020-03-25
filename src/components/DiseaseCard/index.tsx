@@ -21,12 +21,8 @@ const DiseaseCard: React.FC<{ state: DiseasedState }> = ({ state }) => {
       <Info>
         <Title>{state.name}</Title>
         <Counts>
-          <Count>Suspeitos: {state.suspects}</Count>
           <Count>Confirmados: {state.cases}</Count>
           <Count type="death">Mortes: {state.deaths}</Count>
-          {state.recovered && (
-            <Count type="recovered">Recuperados: {state.recovered}</Count>
-          )}
         </Counts>
         <Time>Atualizado {time}</Time>
       </Info>
